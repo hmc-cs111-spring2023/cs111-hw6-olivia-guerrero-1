@@ -1,4 +1,5 @@
 import machines.regex._
+import machines.given
 
 @main
 def main() = {
@@ -6,24 +7,17 @@ def main() = {
   //////////////////////////////////////////////////////////////////////////////
   // Part 1
   //////////////////////////////////////////////////////////////////////////////
-  //
-  // TODO: Make it possible to replace the definitions with:
-  //
-  //     val zero = '0'
-  //     val one  = '1'
-  //     etc.
-  //
 
-  val zero = Character('0')
-  val one = Character('1')
-  val two = Character('2')
-  val three = Character('3')
-  val four = Character('4')
-  val five = Character('5')
-  val six = Character('6')
-  val seven = Character('7')
-  val eight = Character('8')
-  val nine = Character('9')
+  val zero = '0'
+  val one = '1'
+  val two = '2'
+  val three = '3'
+  val four = '4'
+  val five = '5'
+  val six = '6'
+  val seven = '7'
+  val eight = '8'
+  val nine = '9'
 
   require(zero matches "0")
   require(one matches "1")
