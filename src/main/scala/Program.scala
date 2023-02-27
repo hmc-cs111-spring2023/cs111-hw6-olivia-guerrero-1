@@ -1,3 +1,4 @@
+import machines._
 import machines.regex._
 import machines.given
 
@@ -39,25 +40,8 @@ def main() = {
   //////////////////////////////////////////////////////////////////////////////
   // Part 3a
   //////////////////////////////////////////////////////////////////////////////
-  //
-  // TODO: Make it possible to replace the definition with:
-  //
-  //    val digit = '0' || '1' || '2' || '3' || '4' || '5' || '6' || '7' || '8' || '9'
-  //
 
-  val digit = Union(
-    zero,
-    Union(
-      one,
-      Union(
-        two,
-        Union(
-          three,
-          Union(four, Union(five, Union(six, Union(seven, Union(eight, nine)))))
-        )
-      )
-    )
-  )
+  val digit = '0' || '1' || '2' || '3' || '4' || '5' || '6' || '7' || '8' || '9'
 
   require(digit matches "0")
   require(digit matches "1")

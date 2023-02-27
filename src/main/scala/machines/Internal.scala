@@ -11,4 +11,13 @@ given Conversion[String, RegularLanguage] = s =>
         ((c, rest) => Concat(Character(c), rest))
     )
 
+extension (r: RegularLanguage)
+    def ||(other: RegularLanguage) = Union(r, other)
+    def ~(other: RegularLanguage) = Concat(r, other)
+    def * = Star(r) 
+    def + = Concat(r, r.*)
+    def apply(n: Int): RegularLanguage = if n == 0 then Star(r) 
+                                          else Concat(r, r{n-1})
+                        
+
 //given Conversion[String, RegularLanguage] = val charList = _.map(Character)
